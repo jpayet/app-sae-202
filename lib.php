@@ -12,6 +12,7 @@
             echo "Erreur :".$e->getMessage()."<br />";
             die();
         }
+        return $db;
     }
 
     //Déconnexion à la base de données
