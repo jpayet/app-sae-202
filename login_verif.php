@@ -13,22 +13,22 @@
     $co=conn();
 
     //On prépare la requête
-    $req=$co->prepare("SELECT * FROM user WHERE user_id LIKE :id");
+    $req=$co->prepare('SELECT * FROM user WHERE user_id LIKE :id');
 
     try {
         //On lance la requête et on la stock dans $result
-        $result = $req->execute(array(
+        $req->execute(array(
             //On défini les variables présentent dans la requête préparée
-            'id' => $id
+            ':id' => $id
         ));
     } catch (PDOException $e){
         echo '<p>Erreur :'.$e->getMessage().'</p>';
         die();
     }
 
-    $result_nb=$result->rowCount();
-    if ($result_nb>0){
-        $column=$result->fetch(PDO::FETCH_ASSOC);
+    $count_result=$req->rowCount();
+    if ($count_result>0){
+        $column=$req->fetch(PDO::FETCH_ASSOC);
         if ($id == $column['user_id']){
             if (password_verify($mdp, $column['passwd'])) {
                 $_SESSION['user_name'] = $column['first_name'];
