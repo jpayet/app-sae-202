@@ -32,6 +32,7 @@
         if ($id == $column['user_id']){
             if (password_verify($mdp, $column['passwd'])) {
                 $_SESSION['user_name'] = $column['first_name'];
+                $_SESSION['user_id'] = $column['user_id'];
                 header('location: index.php'); //à changer avec le nom de la page ou sera redirigé l'user apres s'être co
             } else {
                 $_SESSION['error'] = '<p class="error">Le mot de passe saisi est incorrect</p>';
