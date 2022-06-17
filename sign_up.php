@@ -1,3 +1,4 @@
+<?php require 'lib.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -44,6 +45,11 @@
 
             <button type="submit" class="sub">S'inscrire</button>
         </form>
+        <?php
+            if (!empty($_SESSION['error'])){
+                echo $_SESSION['error'];
+            }
+        ?>
     </div>
 
 </body>

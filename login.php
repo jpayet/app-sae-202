@@ -1,3 +1,5 @@
+<?php require 'lib.php'; ?>
+
 <form action="login_verif.php" method="POST">
     <label for="id"></label>
     <input type="number" name="id" required>
@@ -5,3 +7,9 @@
     <input type="password" name="mdp" minlength="8" required>
     <button type="submit">Envoyer</button>
 </form>
+
+<?php
+    if (!empty($_SESSION['error'])){
+        echo $_SESSION['error'];
+    }
+?>
