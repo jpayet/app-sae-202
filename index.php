@@ -6,3 +6,4 @@
     disconnection();
 
     var_dump($_SESSION['user_name']);
+    var_dump($_SESSION['user_id']);

@@ -39,6 +39,8 @@
                     echo '<a href="profile.php?id='.$_SESSION['user_id'].'">modifier le profil</a> | <a href="logout.php">Déconnexion</a>';
                 }
             }
+        } else {
+            echo '<p> Bienvenue sur Dual Glitch, connectez vous pour accéder à votre QG </p>';
         }
     }
 
