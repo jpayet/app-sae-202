@@ -26,13 +26,13 @@
             <input type="password" name="mdp" placeholder="Mot de passe" minlength="8" required>
             <button type="submit" class="sub">Se connecter</button>
         </form>
+        <?php
+            if (!empty($_SESSION['error'])){
+                echo $_SESSION['error'];
+            }
+        ?>
     </div>
 
 </body>
 </html>
 
-<?php
-    if (!empty($_SESSION['error'])){
-        echo $_SESSION['error'];
-    }
-?>  
