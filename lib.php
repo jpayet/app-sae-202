@@ -19,3 +19,22 @@
     function disconnection(){
         $db = null;
     }
+
+    function dashboard($db){
+        $req = $db->prepare('SELECT name, color FROM group INNER JOIN user ON group.id=user._grp WHERE user_id= :user_id');
+        try {
+            $req->execute(array(
+                ':user_id' => $_SESSION['user_id']
+            ));
+        } catch (PDOException $e){
+            echo '<p>Erreur : '.$e->getMessage().'</p>';
+            die();
+        }
+        $count_result = $req->rowCount();
+        if ($count_result > 0) {
+            while ($column = $req->fetch(PDO::FETCH_ASSOC)) {
+                echo '<p>Bienvenue, ' . $_SESSION['user_name'] . '</p>'."\n";
+                echo '<p>Membres de ' . $column['name']. '</p>'."\n";
+            }
+        }
+    }
