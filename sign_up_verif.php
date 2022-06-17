@@ -16,10 +16,11 @@
 
     $co=conn();
 
-    $req=$co->prepare('INSERT INTO user (last_name, first_name, passwd, TD, _grp) VALUES (:last_name, :first_name, :password, :td, 0)');
+    $req=$co->prepare('INSERT INTO user (profile_pict, last_name, first_name, passwd, TD, _grp) VALUES (:picture, :last_name, :first_name, :password, :td, 0)');
 
     try {
         $req->execute(array(
+            ':picture' => "",
             ':last_name' => ucfirst(mb_strtolower($l_name)),
             ':first_name' => ucfirst(mb_strtolower($f_name)),
             ':password' => password_hash($passwd, PASSWORD_DEFAULT),
