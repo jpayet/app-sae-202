@@ -34,7 +34,7 @@
             $count_result = $req->rowCount();
             if ($count_result > 0) {
                 $column = $req->fetch(PDO::FETCH_ASSOC);
-                    echo '<img src="uploads/'.$column['profile_pict'].'" alt="profile picture" />';
+                    echo '<img src="img/uploads/'.$column['profile_pict'].'" alt="profile picture" />';
                     echo '<p>Bienvenue, ' . $_SESSION['user_name'] . '</p>' . "\n";
                     echo '<p>Membre de ' . $column['name'] . '</p>' . "\n";
                     echo '<a href="profile.php?id='.$_SESSION['user_id'].'">modifier le profil</a> | <a href="logout.php">Déconnexion</a>';
