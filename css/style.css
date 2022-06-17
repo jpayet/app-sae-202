@@ -65,7 +65,7 @@ body{
     color: var(--wb);
 }
 
-input[type=text], input[type=password], select {
+input[type=text], input[type=password], input[type=number], select {
     background-color: transparent;
     border-radius: 6px;
     border: var(--wb) 3px solid;
@@ -130,7 +130,7 @@ input {
     .form-twin input[type=text] {
         width: 15vw;
     }
-    input[type=text], input[type=password], select {
+    input[type=text], input[type=password], input[type=number], select {
         background-color: transparent;
         border-radius: 6px;
         border: var(--wb) 4px solid;
@@ -194,7 +194,7 @@ input {
     .form-twin input[type=text] {
         width: 15vw;
     }
-    input[type=text], input[type=password], select {
+    input[type=text], input[type=password], input[type=number], select {
         background-color: transparent;
         border-radius: 6px;
         border: var(--wb) 4px solid;
