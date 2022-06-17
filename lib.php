@@ -22,7 +22,7 @@
 
     function dashboard($db){
         if (!empty($_SESSION['user_id'])) {
-            $req = $db->prepare('SELECT name, color FROM team INNER JOIN user ON team.id=user._grp WHERE user_id= :user_id');
+            $req = $db->prepare('SELECT name, color, profile_pict FROM team INNER JOIN user ON team.id=user._grp WHERE user_id= :user_id');
             try {
                 $req->execute(array(
                     ':user_id' => $_SESSION['user_id']
@@ -34,6 +34,7 @@
             $count_result = $req->rowCount();
             if ($count_result > 0) {
                 $column = $req->fetch(PDO::FETCH_ASSOC);
+                    echo '<img src="uploads/'.$column['profile_pict'].'" alt="profile picture" />';
                     echo '<p>Bienvenue, ' . $_SESSION['user_name'] . '</p>' . "\n";
                     echo '<p>Membre de ' . $column['name'] . '</p>' . "\n";
                     echo '<a href="profile.php?id='.$_SESSION['user_id'].'">modifier le profil</a> | <a href="logout.php">Déconnexion</a>';

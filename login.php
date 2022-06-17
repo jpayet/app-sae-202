@@ -1,8 +1,7 @@
 <?php require 'lib.php'; ?>  
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +13,6 @@
 </head>
 <body>
 
-
-    
     <div class="logo-first">
         <img src="img/Logo.png" alt="">
     </div>
@@ -34,8 +31,7 @@
 </body>
 </html>
 
-
-  <?php
+<?php
     if (!empty($_SESSION['error'])){
         echo $_SESSION['error'];
     }
