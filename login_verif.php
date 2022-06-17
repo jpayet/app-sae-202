@@ -29,7 +29,6 @@
     $count_result=$req->rowCount();
     if ($count_result>0){
         $column=$req->fetch(PDO::FETCH_ASSOC);
-        if ($id == $column['user_id']){
             if (password_verify($mdp, $column['passwd'])) {
                 $_SESSION['user_name'] = $column['first_name'];
                 $_SESSION['user_id'] = $column['user_id'];
@@ -38,10 +37,9 @@
                 $_SESSION['error'] = '<p class="error">Le mot de passe saisi est incorrect</p>';
                 header('location: login.php');
             }
-        } else {
-            $_SESSION['error'] = '<p class="error">L\'identifiant n\'est pas valide</p>';
-            header('location: login.php');
-        }
+    } else {
+        $_SESSION['error'] = '<p class="error">L\'identifiant n\'est pas valide</p>';
+        header('location: login.php');
     }
 
     disconnection();
