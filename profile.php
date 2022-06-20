@@ -17,9 +17,9 @@
         <label for="nom">Nom</label>
         <input type="text" name="l_name" value="<?= $user['last_name'] ?>" disabled/>
 
-        <img src="img/uploads/<?= $user['profile_pict'] ?>" alt="Photo de profil">
+        <img src="img/uploads/<?= $user['profile_pict'] ?>" alt="Photo de profil"/>
         <label for="picture">Votre photo de profil</label>
         <input type="file" name="profile_picture" required />
 
-        <input type="submit" value="Modifier">
+        <input type="submit" value="Modifier"/>
     </form>
