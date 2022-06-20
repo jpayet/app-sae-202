@@ -20,7 +20,7 @@
         <form action="login_verif.php" method="POST" class="form-co">
 
             <!-- <label for="id"></label> -->
-            <input type="number" name="id" placeholder="id" required>
+            <input type="number" name="id" placeholder="id" min="0" required>
 
             <!-- <label for="mdp"></label> -->
             <input type="password" name="mdp" placeholder="Mot de passe" minlength="8" required>
