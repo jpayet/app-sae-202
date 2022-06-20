@@ -55,3 +55,37 @@
         }
     }
 
+    function getUser($db, $idUser){
+        $req=$db->prepare('SELECT * FROM user WHERE user_id = :idUser');
+        try {
+            $req->execute(array(
+                ':idUser' => $idUser
+            ));
+        } catch (PDOException $e){
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+        return $req->fetch();
+    }
+
+    function update_user_profile($db, $id, $newPicture){
+        $req=$db->prepare('UPDATE user SET profile_pict = :picture WHERE user_id = :id');
+        try {
+            $req->execute(array(
+                ':picture' => $newPicture,
+                ':id' => $id
+            ));
+        } catch (PDOException $e){
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+        if ($req->rowCount() == 1){
+            header('location: index.php');
+        } else {
+            echo '<p> Oups... Une erreur est survenue </p>';
+            die();
+        }
+    }
+
+
+
