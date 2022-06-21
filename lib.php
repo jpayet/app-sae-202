@@ -54,6 +54,8 @@
         }
     }
 
+        // yo
+
     function getUser($db, $idUser){
         $req=$db->prepare('SELECT * FROM user WHERE user_id = :idUser');
         try {
