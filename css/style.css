@@ -13,6 +13,8 @@ body{
     --rt : #36141485;
     --wb : #D9D9D9;
     --font : 'Cascadia Code', sans-serif;
+    --lisible : -1px -1px 5px #000000, 2px -2px 5px #000000, -1px 1px 5px #000000, 1px 1px 5px #000000;
+
 }
 
 
@@ -302,12 +304,12 @@ figure {
         
         img {
             position: absolute;
-            border: 15px solid rgba(0, 0, 0, .8);
+          
             opacity: .5;
             -webkit-transition: 1s;
             width: 500px;
             height: 250px;
-            background:#ccc;
+            
         }
 
             
@@ -451,7 +453,10 @@ input[type=radio]:checked + label {
 .choice a:hover{
     text-shadow: 2px 2px 1px #f00, -2px -2px 1px #00e3ff;
     padding: 5px;
-    font-size: 16px;
+    font-size: 16px;}
+
+
+
 
 /* CORE */
 
@@ -552,3 +557,91 @@ input[type=radio]:checked + label {
 .form-lign input[type=submit]:hover{
     background-color: #c60c0c;
   }
+
+/* profil */
+
+.cont{
+    background-image: url('../img/tab-pro.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70vw;
+    height: 84vh;   
+}
+
+.form-pro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8vh;
+    padding-top: 15vh;
+}
+
+.form-pro input[type=submit]{
+    background-color: #fbfbfbcf;
+    font-size: 30px;
+    padding: 1vh 5vw;
+    font-family: var(--font);
+    transition: 0.2s;
+    margin-top: -3vh;
+}
+
+.form-pro input[type=submit]:hover{
+    text-shadow: 2px 2px 1px #f00, -2px -2px 1px #00e3ff;
+ 
+    
+}
+
+.grp{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vw;
+}
+
+.grp input[type=text]{
+    background-color: #d3f4ff6b;
+    color: #d8d8d8;
+    font-weight: bold ;
+    text-shadow: var(--lisible);
+}
+
+.grp label{
+    cursor: pointer;
+    background: #ffffffc2;
+    display: inline-block;
+     border-radius: 0%;  
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--font);
+    width: 12vw;
+    padding-top: 7px;
+    height: 23px;
+ 
+    border: rgb(255, 255, 255) 2px solid;
+    text-align: center;
+    color: black;
+}
+
+.pic-pro{
+    max-width: 20vw;
+    max-height: 20vh;
+    overflow: hidden;
+}
+
+.img-pro{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+
+
+input[type="file"] {
+ 
+    border: none;
+    border-radius: 25px;
+    background-color: #b0e0e694;
+    font-family: var(--font);
+}
