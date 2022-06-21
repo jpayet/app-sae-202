@@ -49,10 +49,12 @@
             }
         } else {
             echo '<div class="dash">';
-            echo    '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p>';
+            echo    '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p><br>'."\n".'<a href="connexion.php">Connexion</a><br>';
             echo '</div>';
         }
     }
+
+        // yo
 
     function getUser($db, $idUser){
         $req=$db->prepare('SELECT * FROM user WHERE user_id = :idUser');
