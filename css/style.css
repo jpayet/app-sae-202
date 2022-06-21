@@ -336,10 +336,8 @@ label:hover {
     background: #fb0000a0;
 }
 
-input {
-    position: absolute;
-    left: -9999px;
-}
+
+
 
 input:checked + label {
     font-weight: bold;
