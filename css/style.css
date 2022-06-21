@@ -280,7 +280,7 @@ figure {
     -webkit-perspective: 1000px;
     -webkit-perspective-origin: 45% -25%;
 }
-
+/* yo */
     .carousel {
         -webkit-transform-style: preserve-3d;
         -webkit-transform: translateZ(-340px);
