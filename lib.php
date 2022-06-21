@@ -39,10 +39,10 @@
 
                     echo '<div class="dash">';
                     echo    '<div class="sup">';
-                    echo        '<img src="uploads/'.$column['profile_pict'].'" alt="profile picture" />';
+                    echo        '<img src="uploads/'.$column['profile_pict'].'" alt="profile picture" class="img-profil"/>';
                     echo        '<div class="col-text">';
                     echo            '<p>Bienvenue, ' . $_SESSION['user_name'] . '</p>';
-                    echo            '<p>Membre de ' . $column['name'] . '</p>';
+                    echo            '<p>Membre de <br/>' . $column['name'] . '</p>';
                     echo        '</div>';
                     echo    '</div>';
                     echo    '<div class="choice">';
@@ -51,7 +51,9 @@
                     echo '</div>';
             }
         } else {
-            echo '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p>';
+            echo '<div class="dash">';
+            echo    '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p>';
+            echo '</div>';
         }
     }
 

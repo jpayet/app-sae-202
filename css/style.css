@@ -377,6 +377,12 @@ input:checked + label {
 
 /* /////////////// */
 
+.img-profil{
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    margin: 3vh 0 0 2vh;
+}
 
 .index-dashboard{
     height: 100%;
@@ -398,12 +404,19 @@ input:checked + label {
 
 .sup   {
     display: flex;
-    flex-direction: row ;
-    column-gap: 2vw;
+    flex-direction: row;
+    column-gap: 1vw;
 }
 
-.col-text {
+.col-text {display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
     margin-top: 2vh;
+}
+
+.col-text p{
+    font-family: var(--font);
+    color: black;
 }
 
 .col-img{
@@ -412,6 +425,25 @@ input:checked + label {
 
 .choice {
     display: flex;
-    column-gap: 3vw;
-    margin-left: 2vw;
+    margin: 5vh 2vh 0 0;
+    column-gap: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice a{
+    font-family: var(--font);
+    text-decoration: none;
+    color: white;
+    background: #006aff;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.choice a:hover{
+    text-shadow: 2px 2px 1px #f00, -2px -2px 1px #00e3ff;
+    padding: 8px;
+    font-size: 18px;
 }
