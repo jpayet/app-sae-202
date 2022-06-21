@@ -69,28 +69,23 @@
 
 
 
-// const inner = [
-//     document.getElementById('Skip2'), 
-//     document.getElementById('Skip1'), 
-//     document.getElementById('Skip3'), 
-//     document.getElementById('Skip4'), 
-//     document.getElementById('Skip5') 
+  
+  
+    function redir(){
+        window.location.href = " ";
+    }
+  
+    // img1.onclick('click',  Done) ;
     
-//   ];
-  
-  
-//   for(let value of inner) {
-  
-//     value.addEventListener('click',  Done) ;
+ 
+    //   function Done(){
+    //      window.location.href = "../sign_up2.html";
+    //  }
+ 
+
     
-//     }
 
-// function Done(){
-
-//     document.getElementById("parent").style.display= "none";
-
-// }
-  
+ 
   
   
   

@@ -43,11 +43,11 @@
                 
                         <div class="container">
                             <div class="carousel    ">
-                                <img src="images/1.jpg" alt="Landscape 1">
-                                <img src="images/2.jpg" alt="Landscape 2">
-                                <img src="images/3.jpg" alt="Landscape 3">
-                                <img src="images/4.jpg" alt="Landscape 4">
-                                <img src="images/5.jpg" alt="Landscape 5">
+                                <img src="images/1.jpg" id="img1" alt="Landscape 1" onclick="redir()">
+                                <img src="images/2.jpg" id="img2" alt="Landscape 2">
+                                <img src="images/3.jpg" id="img3" alt="Landscape 3">
+                                <img src="images/4.jpg" id="img4" alt="Landscape 4">
+                                <img src="images/5.jpg" id="img5" alt="Landscape 5">
                                  
                             </div>
                         </div>
@@ -75,6 +75,7 @@
 
 
 
-        
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/script.js"></script>
     </body>
     </html>

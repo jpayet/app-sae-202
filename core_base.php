@@ -1,27 +1,65 @@
-<?php require 'lib.php'; ?>
+  <?php require 'lib.php'; ?>  
 
-<form action="break_core_verif.php" method="post">
-    <label for="core_1"></label>
-    <input type="text" name="core_1">
-    <input type="submit" value="→">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>core</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-image: url('img/background-dash.png');">
 
-<form action="break_core_verif.php" method="post">
-    <label for="core_2"></label>
-    <input type="text" name="core_2">
-    <input type="submit" value="→">
-</form>
-
-<form action="break_core_verif.php" method="post">
-    <label for="core_3"></label>
-    <input type="text" name="core_3">
-    <input type="submit" value="→">
-</form>
-
-<form action="break_core_verif.php" method="post">
-    <label for="core_4"></label>
-    <input type="text" name="core_4">
-    <input type="submit" value="→">
-</form>
+<div class="goB">
+    <a href="index.php"><h2>Retourner à l'accueil</h2></a>
+</div>
 
 
+    <div class="screen">
+        <div class="box">
+            <div class="forms">
+                <form action="break_core_verif.php" method="post" class="form-lign">
+                    <label for="core_1"></label>
+                    <input type="text" name="core_1" placeholder="Clé N°1">
+                    <input type="submit" value="Envoyer">
+                </form>
+            
+                <form action="break_core_verif.php" method="post"class="form-lign">
+                    <label for="core_2"></label>
+                    <input type="text" name="core_2" placeholder="Clé N°2">
+                    <input type="submit" value="Envoyer">
+                </form>
+            
+                <form action="break_core_verif.php" method="post"class="form-lign">
+                    <label for="core_3"></label>
+                    <input type="text" name="core_3" placeholder="Clé N°3">
+                    <input type="submit" value="Envoyer">
+                </form>
+            
+                <form action="break_core_verif.php" method="post"class="form-lign">
+                    <label for="core_4"></label>
+                    <input type="text" name="core_4" placeholder="Clé N°4">
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
+
+        <div class="hearts">
+            <img src="img/coeur.png" alt="" class="core-img"  id="heart1">
+            <img src="img/coeur.png" alt="" class="core-img"  id="heart2">
+            <img src="img/coeur.png" alt="" class="core-img"  id="heart3">
+            <img src="img/coeur.png" alt="" class="core-img"  id="heart4">
+        </div>
+    </div>
+
+    
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
