@@ -452,7 +452,6 @@ input[type=radio]:checked + label {
     text-shadow: 2px 2px 1px #f00, -2px -2px 1px #00e3ff;
     padding: 5px;
     font-size: 16px;
-}
 
 /* CORE */
 
@@ -552,4 +551,4 @@ input[type=radio]:checked + label {
 
 .form-lign input[type=submit]:hover{
     background-color: #c60c0c;
-}
+  }
