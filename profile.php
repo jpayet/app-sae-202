@@ -1,8 +1,12 @@
 <?php
     require 'lib.php';
 
-    //Récupération des infos
-    $id=$_SESSION['user_id'];
+    if (!empty($_SESSION['user_id'])){
+        $id=$_SESSION['user_id'];
+    } else{
+        $_SESSION['error']='<p class="error">Veuillez vous connectez pour accéder à votre profil</p>';
+        header('location: login.php');
+    }
 
     $co=conn();
     $user=getUser($co,$id);

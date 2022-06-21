@@ -1,4 +1,13 @@
-<?php require 'lib.php'; ?>  
+<?php
+    require 'lib.php';
+    if (isset($_SERVER['HTTP_REFERER'])){
+        if ($_SERVER['HTTP_REFERER'] == "https://mmi21h11.mmi-troyes.fr/app-sae-202/Inscription" || $_SERVER['HTTP_REFERER'] == "https://mmi21h11.mmi-troyes.fr/app-sae-202/sign_up.php" ){
+            $co=conn();
+            $last_user=get_last_user($co);
+            disconnection();
+        }
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,9 +36,14 @@
             <button type="submit" class="sub">Se connecter</button>
         </form>
         <?php
+            if (!empty($last_user)){
+                echo '<p id="last_user">Votre id est : '.$last_user['user_id'].', garder le bien précieusement. Dans le cas où vous le perdriez faites une demande auprès d\'un des membres de Dual Glitch.</p>';
+            }
             if (!empty($_SESSION['error'])){
                 echo $_SESSION['error'];
+                unset ($_SESSION['error']);
             }
+
         ?>
     </div>
 

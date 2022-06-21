@@ -72,16 +72,16 @@
   
   
     function redir1(){
-        window.location.href = "../img/uploads/at1.pdf";
+        window.location.href = "img/uploads/at1.pdf";
     }
     function redir2(){
-        window.location.href = "../img/uploads/at2.pdf";
+        window.location.href = "img/uploads/at2.pdf";
     }
     function redir3(){
-        window.location.href = "../core_base.php";
+        window.location.href = "core_base.php";
     }
     function redir4(){
-        window.location.href = "../img/uploads/at4.pdf ";
+        window.location.href = "img/uploads/at4.pdf ";
     }
   
     // img1.onclick('click',  Done) ;
