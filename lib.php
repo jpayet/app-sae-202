@@ -36,7 +36,7 @@
                 $column = $req->fetch(PDO::FETCH_ASSOC);
                     echo '<div class="dash">';
                     echo    '<div class="sup">';
-                    echo        '<img src="img/uploads/'.$column['profile_pict'].'" alt="profile picture" />';
+                    echo        '<img src="img/uploads/'.$column['profile_pict'].'" alt="profile picture" class="img-profil" />';
                     echo        '<div class="col-text">';
                     echo            '<p>Bienvenue, ' . $_SESSION['user_name'] . '</p>';
                     echo            '<p>Membre de <br/>' . $column['name'] . '</p>';
@@ -48,8 +48,8 @@
                     echo '</div>';
             }
         } else {
-            echo '<div class="dash">';
-            echo    '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p><br>'."\n".'<a href="connexion.php">Connexion</a><br>';
+            echo '<div class="dash choice">';
+            echo    '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p><br>'."\n".'<a href="login.php">Connexion</a><br>';
             echo '</div>';
         }
     }
