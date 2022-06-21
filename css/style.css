@@ -332,14 +332,11 @@ label {
     margin-bottom: 7vh;
 }
 
-label:hover {
-    background: #fb0000a0;
+input[type=radio]{
+    display: none;
 }
 
-
-
-
-input:checked + label {
+input[type=radio]:checked + label {
     font-weight: bold;
     background: #fb0000a0;
 }

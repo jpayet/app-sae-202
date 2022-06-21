@@ -34,9 +34,6 @@
             $count_result = $req->rowCount();
             if ($count_result > 0) {
                 $column = $req->fetch(PDO::FETCH_ASSOC);
-                    
-                     
-
                     echo '<div class="dash">';
                     echo    '<div class="sup">';
                     echo        '<img src="uploads/'.$column['profile_pict'].'" alt="profile picture" class="img-profil"/>';
