@@ -12,18 +12,45 @@
     $user=getUser($co,$id);
     disconnection($co);
 ?>
-    <form action="update_profile.php" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?= $id ?>"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>core</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style=" background: rgba(21,21,21,1) ">
 
-        <label for="prenom">Prénom</label>
-        <input type="text" name="f_name" value="<?= $user['first_name'] ?>" disabled/>
 
-        <label for="nom">Nom</label>
-        <input type="text" name="l_name" value="<?= $user['last_name'] ?>" disabled/>
+    <div class="cont">    
+        <form action="update_profile.php" method="post" enctype="multipart/form-data" class="form-pro">
+            <input type="hidden" name="id" value="<?= $id ?>"/>
 
-        <img src="img/uploads/<?= $user['profile_pict'] ?>" alt="Photo de profil"/>
-        <label for="picture">Votre photo de profil</label>
-        <input type="file" name="profile_picture" required />
+            <div class="grp">
+                <label for="prenom">Prénom</label>
+                <input type="text" name="f_name" value="<?= $user['first_name'] ?>" disabled/>
+            </div>
 
-        <input type="submit" value="Modifier"/>
-    </form>
+            <div class="grp">
+                <label for="nom">Nom</label>
+                <input type="text" name="l_name" value="<?= $user['last_name'] ?>" disabled/>
+            </div>
+
+            <div class="grp">
+                <div class="img-pro">   
+                    <label for="picture">Votre photo de profil</label>
+                    <input type="file" name="profile_picture" required />
+                </div>
+             
+                <img src="img/uploads/<?= $user['profile_pict'] ?>" alt="Photo de profil" class="pic-pro"/>
+            </div>
+
+            <input type="submit" value="Modifier"/>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -25,29 +25,29 @@
                   
                     
                         <input checked id="one" name="multiples" type="radio" value="1">
-                        <label class="lab" for="one">1</label>
+                        <label class="lab" for="one">-</label>
                 
                         <input id="two" name="multiples" type="radio" value="2">
-                        <label for="two">2</label>
+                        <label for="two">1</label>
                 
                         <input id="three" name="multiples" type="radio" value="3">
-                        <label for="three">3</label>
+                        <label for="three">2</label>
                 
                         <input id="four" name="multiples" type="radio" value="4">
-                        <label for="four">4</label>
+                        <label for="four">3</label>
                 
                         <input id="five" name="multiples" type="radio" value="5">
-                        <label for="five">5</label>
+                        <label for="five">4</label>
                 
                         
                 
                         <div class="container">
                             <div class="carousel    ">
-                                <img src="images/1.jpg" id="img1" alt="Landscape 1" onclick="redir()">
-                                <img src="images/2.jpg" id="img2" alt="Landscape 2">
-                                <img src="images/3.jpg" id="img3" alt="Landscape 3">
-                                <img src="images/4.jpg" id="img4" alt="Landscape 4">
-                                <img src="images/5.jpg" id="img5" alt="Landscape 5">
+                                <img src="img/activite_1.png" id="img1" alt="Landscape 1" >
+                                <img src="img/activite_1.png" id="img2" alt="Landscape 2" onclick="redir1()">
+                                <img src="img/activite_2.png" id="img3" alt="Landscape 3" onclick="redir2()">
+                                <img src="img/activite_3.png" id="img4" alt="Landscape 4" onclick="redir3()">
+                                <img src="img/activite_4.png" id="img5" alt="Landscape 5" onclick="redir4()">
                                  
                             </div>
                         </div>
