@@ -397,6 +397,8 @@ input[type=radio]:checked + label {
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .sup   {
@@ -406,7 +408,7 @@ input[type=radio]:checked + label {
 }
 
 .col-text {display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 1vw;
     margin-top: 2vh;
 }
@@ -422,8 +424,8 @@ input[type=radio]:checked + label {
 
 .choice {
     display: flex;
-    margin: 5vh 2vh 0 0;
-    column-gap: 2vw;
+    margin: 2vh 2vh 0 0;
+    column-gap: 0.5vw;
     justify-content: center;
     align-items: center;
 }
@@ -432,7 +434,7 @@ input[type=radio]:checked + label {
     font-family: var(--font);
     text-decoration: none;
     color: white;
-    background: #006aff;
+    background: #181818;
     padding: 5px;
     font-size: 16px;
     border-radius: 2px;
@@ -441,6 +443,6 @@ input[type=radio]:checked + label {
 
 .choice a:hover{
     text-shadow: 2px 2px 1px #f00, -2px -2px 1px #00e3ff;
-    padding: 8px;
-    font-size: 18px;
+    padding: 5px;
+    font-size: 16px;
 }
