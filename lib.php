@@ -89,7 +89,7 @@
     }
 
     function get_last_user($db){
-        $req="SELECT * FROM user ORDER BY user_id DESC LIMIT 1";
+        $req='SELECT * FROM user ORDER BY user_id DESC LIMIT 1';
         try {
             $res=$db->query($req);
         } catch (PDOException $e) {
@@ -98,6 +98,15 @@
         }
         return $res->fetch();
     }
+
+    //Fonction de composition de groupes aléatoirement par TD (7 groupes de 4 dans un 1 TD) || A développer si notre atelier est choisi
+    /*
+    function group_user($db){
+        $req_AB='SELECT * FROM user WHERE TD = 'AB'';
+        $res_AB=$db->query($req);
+        }
+    }
+    */
 
 
 
