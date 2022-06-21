@@ -51,7 +51,7 @@
                     echo '</div>';
             }
         } else {
-            echo '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p>';
+            echo '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p><a href="login.php">Connexion</a>';
         }
     }
 
