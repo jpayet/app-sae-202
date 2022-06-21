@@ -36,7 +36,7 @@
                 $column = $req->fetch(PDO::FETCH_ASSOC);
                     echo '<div class="dash">';
                     echo    '<div class="sup">';
-                    echo        '<img src="uploads/'.$column['profile_pict'].'" alt="profile picture" class="img-profil"/>';
+                    echo        '<img src="img/uploads/'.$column['profile_pict'].'" alt="profile picture" />';
                     echo        '<div class="col-text">';
                     echo            '<p>Bienvenue, ' . $_SESSION['user_name'] . '</p>';
                     echo            '<p>Membre de <br/>' . $column['name'] . '</p>';
