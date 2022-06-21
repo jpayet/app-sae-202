@@ -34,15 +34,12 @@
             $count_result = $req->rowCount();
             if ($count_result > 0) {
                 $column = $req->fetch(PDO::FETCH_ASSOC);
-                    
-                     
-
                     echo '<div class="dash">';
                     echo    '<div class="sup">';
                     echo        '<img src="img/uploads/'.$column['profile_pict'].'" alt="profile picture" />';
                     echo        '<div class="col-text">';
                     echo            '<p>Bienvenue, ' . $_SESSION['user_name'] . '</p>';
-                    echo            '<p>Membre de ' . $column['name'] . '</p>';
+                    echo            '<p>Membre de <br/>' . $column['name'] . '</p>';
                     echo        '</div>';
                     echo    '</div>';
                     echo    '<div class="choice">';
@@ -51,7 +48,9 @@
                     echo '</div>';
             }
         } else {
-            echo '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p><a href="login.php">Connexion</a>';
+            echo '<div class="dash">';
+            echo    '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p>';
+            echo '</div>';
         }
     }
 
