@@ -43,7 +43,7 @@
                     echo        '</div>';
                     echo    '</div>';
                     echo    '<div class="choice">';
-                    echo        '<a href="profile.php?id='.$_SESSION['user_id'].'">modifier le profil</a> <a href="logout.php">Déconnexion</a>';
+                    echo        '<a href="profile.php">modifier le profil</a> <a href="logout.php">Déconnexion</a>';
                     echo    '</div>';
                     echo '</div>';
             }
@@ -86,6 +86,17 @@
             echo '<p> Oups... Une erreur est survenue </p>';
             die();
         }
+    }
+
+    function get_last_user($db){
+        $req="SELECT * FROM user ORDER BY user_id DESC LIMIT 1";
+        try {
+            $res=$db->query($req);
+        } catch (PDOException $e) {
+            echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+            die();
+        }
+        return $res->fetch();
     }
 
 
