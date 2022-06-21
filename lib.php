@@ -34,13 +34,24 @@
             $count_result = $req->rowCount();
             if ($count_result > 0) {
                 $column = $req->fetch(PDO::FETCH_ASSOC);
-                    echo '<img src="img/uploads/'.$column['profile_pict'].'" alt="profile picture" />';
-                    echo '<p>Bienvenue, ' . $_SESSION['user_name'] . '</p>' . "\n";
-                    echo '<p>Membre de ' . $column['name'] . '</p>' . "\n";
-                    echo '<a href="profile.php">modifier le profil</a> | <a href="logout.php">Déconnexion</a>';
+                    
+                     
+
+                    echo '<div class="dash">';
+                    echo    '<div class="sup">';
+                    echo        '<img src="uploads/'.$column['profile_pict'].'" alt="profile picture" />';
+                    echo        '<div class="col-text">';
+                    echo            '<p>Bienvenue, ' . $_SESSION['user_name'] . '</p>';
+                    echo            '<p>Membre de ' . $column['name'] . '</p>';
+                    echo        '</div>';
+                    echo    '</div>';
+                    echo    '<div class="choice">';
+                    echo        '<a href="profile.php?id='.$_SESSION['user_id'].'">modifier le profil</a> <a href="logout.php">Déconnexion</a>';
+                    echo    '</div>';
+                    echo '</div>';
             }
         } else {
-            echo '<p> Bienvenue sur Dual Glitch, connectez vous pour accéder à votre QG </p>';
+            echo '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p>';
         }
     }
 
