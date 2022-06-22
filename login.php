@@ -40,6 +40,7 @@
     <?php
             if (!empty($last_user)){
                 echo '<p id="last_user">Votre id est : '.$last_user['user_id'].', garder le bien précieusement. Dans le cas où vous le perdriez faites une demande auprès d\'un des membres de Dual Glitch.</p>';
+                unset($last_user);
             }
             if (!empty($_SESSION['error'])){
                 echo $_SESSION['error'];
