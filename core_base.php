@@ -1,7 +1,7 @@
   <?php
     require 'lib.php';
     if (empty($_SESSION['user_id'])) {
-        $_SESSION['error'] = '<p class="error">Veuillez vous connectez pour accéder à l\'activité</p>';
+        $_SESSION['error'] = '<div class="errorbox"> <p class="error">Veuillez vous connectez pour accéder à l\'activité</p> </div>';
         header('location: login.php');
     }
   ?>

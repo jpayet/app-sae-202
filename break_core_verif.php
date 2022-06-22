@@ -68,7 +68,7 @@
                 $_SESSION['success'] = '<p class="comment">BRAVO ! Vous pouvez désormais vous attaquez au 2e coeur</p>';
                 header('location: core_base.php');
             } else {
-                $_SESSION['invalid'] = '<p class="comment">Ce n\'est pas le bon code. Soyez rigoureux !</p>';
+                $_SESSION['invalid'] = '<p class="comment">Ce n\'est pas le bon code, réessayez !</p>';
                 header('location: core_base.php');
             }
         } elseif ($_SESSION['score'] == 1) {
@@ -85,7 +85,7 @@
                 $_SESSION['success'] = '<p class="comment">BRAVO ! Vous pouvez désormais vous attaquez au 3e coeur</p>';
                 header('location: core_base.php');
             } else {
-                $_SESSION['invalid'] = '<p class="comment">Ce n\'est pas le bon code. Soyez rigoureux !</p>';
+                $_SESSION['invalid'] = '<p class="comment">Code Faux, il ne veux pas nous laissez passer !</p>';
                 header('location: core_base.php');
             }
         } elseif ($_SESSION['score'] == 2) {
@@ -102,7 +102,7 @@
                 $_SESSION['success'] = '<p class="comment">BRAVO ! Vous pouvez désormais vous attaquez au 4e coeur</p>';
                 header('location: core_base.php');
                 } else {
-                    $_SESSION['invalid'] = '<p class="comment">Ce n\'est pas le bon code. Soyez rigoureux !</p>';
+                    $_SESSION['invalid'] = '<p class="comment"> ça n\'est pas ça, on doit avoir fait une erreur </p>';
                     header('location: core_base.php');
                 }
         } elseif ($_SESSION['score'] == 3){
@@ -119,7 +119,7 @@
                 $_SESSION['success'] = '<p class="comment">BRAVO ! Vous êtes venu à bout du virus</p>';
                 header('location: core_base.php');
             } else {
-                $_SESSION['invalid'] = '<p class="comment">Ce n\'est pas le bon code. Soyez rigoureux !</p>';
+                $_SESSION['invalid'] = '<p class="comment">Mauvais code ! Cherchons à nouveau</p>';
                 header('location: core_base.php');
             }
         } else {
