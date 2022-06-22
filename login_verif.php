@@ -6,7 +6,7 @@
         $id=$_POST['id'];
         $mdp=$_POST['mdp'];
     } else {
-        $_SESSION['error'] = '<p class="error">Veuillez remplir tous les champs</p>';
+        $_SESSION['error'] = '<div><p class="error">Veuillez remplir tous les champs</p></div>';
         header('location: login.php');
     }
 
@@ -34,11 +34,11 @@
                 $_SESSION['user_id'] = $column['user_id'];
                 header('location: index.php'); //à changer avec le nom de la page ou sera redirigé l'user apres s'être co
             } else {
-                $_SESSION['error'] = '<p class="error">Le mot de passe saisi est incorrect</p>';
+                $_SESSION['error'] = '<div class="errorbox"><p class="error">Le mot de passe saisi est incorrect</p></div>';
                 header('location: login.php');
             }
     } else {
-        $_SESSION['error'] = '<p class="error">L\'identifiant n\'est pas valide</p>';
+        $_SESSION['error'] = '<div class="errorbox"><p class="error">L\'identifiant n\'est pas valide</p></div>';
         header('location: login.php');
     }
 

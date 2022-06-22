@@ -35,7 +35,9 @@
             <input type="password" name="mdp" placeholder="Mot de passe" minlength="8" required>
             <button type="submit" class="sub">Se connecter</button>
         </form>
-        <?php
+
+    </div>
+    <?php
             if (!empty($last_user)){
                 echo '<p id="last_user">Votre id est : '.$last_user['user_id'].', garder le bien précieusement. Dans le cas où vous le perdriez faites une demande auprès d\'un des membres de Dual Glitch.</p>';
             }
@@ -45,8 +47,6 @@
             }
 
         ?>
-    </div>
-
 </body>
 </html>
 

@@ -10,7 +10,7 @@
     if ($mdp == $mdp2){
         $passwd = $mdp;
     } else {
-        $_SESSION['error'] = '<p>Les deux mots de passe ne correspondent pas</p>';
+        $_SESSION['error'] = '<div class="errorbox"><p>Les deux mots de passe ne correspondent pas</p></div>';
         header('location: sign_up.php');
     }
 
@@ -34,7 +34,7 @@
     if ($req->rowCount()==1){
         header('location: login.php');
     } else {
-        echo '<p>Erreur lors de la création du compte</p>';
+        echo '<div class="errorbox"><p>Erreur lors de la création du compte</p></div>';
         die();
     }
 
