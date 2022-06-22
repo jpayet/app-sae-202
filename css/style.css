@@ -305,6 +305,8 @@ figure {
         img {
             position: absolute;
           
+
+
             opacity: .5;
             -webkit-transition: 1s;
             width: 500px;
@@ -644,4 +646,22 @@ input[type="file"] {
     border-radius: 25px;
     background-color: #b0e0e694;
     font-family: var(--font);
+}
+
+.error{
+    background-color: #b40b0b;
+    color: white;
+    border-radius: 5px;
+    font-family: var(--font);
+    width: 25vw;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorbox{
+    display: flex;
+    margin-top: -5vh;
+    width: 20vw;
 }
