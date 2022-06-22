@@ -49,7 +49,8 @@
             }
         } else {
             echo '<div class="dash choice">';
-            echo    '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p><br>'."\n".'<a href="login.php">Connexion</a><br>';
+            echo    '<p> Bienvenue sur Dual Glitch, <br/> connectez vous pour accéder à votre QG </p><br>'."\n";
+            echo    '<a href="login.php">Connexion</a><a href="sign_up.php">Inscription</a>';
             echo '</div>';
         }
     }
