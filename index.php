@@ -43,7 +43,7 @@
                 
                         <div class="container">
                             <div class="carousel    ">
-                                <img src="img/activite_1.png" id="img1" alt="Landscape 1" >
+                                <img src="img/Bienvenue.png" id="img1" alt="Landscape 1" >
                                 <img src="img/activite_1.png" id="img2" alt="Landscape 2" onclick="redir1()">
                                 <img src="img/activite_2.png" id="img3" alt="Landscape 3" onclick="redir2()">
                                 <img src="img/activite_3.png" id="img4" alt="Landscape 4" onclick="redir3()">
