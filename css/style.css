@@ -665,3 +665,12 @@ input[type="file"] {
     margin-top: -5vh;
     width: 20vw;
 }
+
+.comment{
+    font-family: var(--font);
+    width: 18vw;
+    margin-top: -4vh;
+    margin-left: 7vw;
+    color: white;
+
+}
