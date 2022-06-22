@@ -65,10 +65,10 @@
                     echo '<p>Erreur : ' . $e->getMessage() . '</p>';
                     die();
                 }
-                $_SESSION['success'] = '<p>BRAVO ! Vous pouvez désormais vous attaquez au 2e coeur</p>';
+                $_SESSION['success'] = '<p class="comment">BRAVO ! Vous pouvez désormais vous attaquez au 2e coeur</p>';
                 header('location: core_base.php');
             } else {
-                $_SESSION['invalid'] = '<p>Ce n\'est pas le bon code. Soyez rigoureux !</p>';
+                $_SESSION['invalid'] = '<p class="comment">Ce n\'est pas le bon code. Soyez rigoureux !</p>';
                 header('location: core_base.php');
             }
         } elseif ($_SESSION['score'] == 1) {
@@ -82,10 +82,10 @@
                     echo '<p>Erreur : ' . $e->getMessage() . '</p>';
                     die();
                 }
-                $_SESSION['success'] = '<p>BRAVO ! Vous pouvez désormais vous attaquez au 3e coeur</p>';
+                $_SESSION['success'] = '<p class="comment">BRAVO ! Vous pouvez désormais vous attaquez au 3e coeur</p>';
                 header('location: core_base.php');
             } else {
-                $_SESSION['invalid'] = '<p>Ce n\'est pas le bon code. Soyez rigoureux !</p>';
+                $_SESSION['invalid'] = '<p class="comment">Ce n\'est pas le bon code. Soyez rigoureux !</p>';
                 header('location: core_base.php');
             }
         } elseif ($_SESSION['score'] == 2) {
@@ -99,10 +99,10 @@
                     echo '<p>Erreur : ' . $e->getMessage() . '</p>';
                     die();
                 }
-                $_SESSION['success'] = '<p>BRAVO ! Vous pouvez désormais vous attaquez au 4e coeur</p>';
+                $_SESSION['success'] = '<p class="comment">BRAVO ! Vous pouvez désormais vous attaquez au 4e coeur</p>';
                 header('location: core_base.php');
                 } else {
-                    $_SESSION['invalid'] = '<p>Ce n\'est pas le bon code. Soyez rigoureux !</p>';
+                    $_SESSION['invalid'] = '<p class="comment">Ce n\'est pas le bon code. Soyez rigoureux !</p>';
                     header('location: core_base.php');
                 }
         } elseif ($_SESSION['score'] == 3){
@@ -116,14 +116,14 @@
                     echo '<p>Erreur : ' . $e->getMessage() . '</p>';
                     die();
                 }
-                $_SESSION['success'] = '<p>BRAVO ! Vous êtes venu à bout du virus</p>';
+                $_SESSION['success'] = '<p class="comment">BRAVO ! Vous êtes venu à bout du virus</p>';
                 header('location: core_base.php');
             } else {
-                $_SESSION['invalid'] = '<p>Ce n\'est pas le bon code. Soyez rigoureux !</p>';
+                $_SESSION['invalid'] = '<p class="comment">Ce n\'est pas le bon code. Soyez rigoureux !</p>';
                 header('location: core_base.php');
             }
         } else {
-            $_SESSION['success'] = '<p>Vous l\'avez battu...C\'est bon...Il est temps d\'arrêter</p>';
+            $_SESSION['success'] = '<p class="comment">Vous l\'avez battu...C\'est bon...Il est temps d\'arrêter</p>';
             header('location: core_base.php');
         }
     }
